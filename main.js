@@ -16,7 +16,7 @@ async function onsubmit1(event) {
     check = false;
     try {
       await axios.put(
-        `https://crudcrud.com/api/cb83671e8b984212b05b2bbac9ce9e78/data/${userID}`,
+        `https://crudcrud.com/api/5eb4c5dde7254fe0b74eae95a84ebfe0/appointmentData/${userID}`,
         obj
       );
       check = true;
@@ -33,7 +33,7 @@ async function onsubmit1(event) {
     userID = null;
     axios
       .post(
-        "https://crudcrud.com/api/7d89384a746441468ecb6f466f94ebde/appointmentData ",
+        "https://crudcrud.com/api/5eb4c5dde7254fe0b74eae95a84ebfe0/appointmentData ",
         obj
       )
       .then((response) => {
@@ -52,7 +52,7 @@ async function onsubmit1(event) {
 window.addEventListener("DOMContentLoaded", async () => {
  try{
  await axios
-  .get("https://crudcrud.com/api/7d89384a746441468ecb6f466f94ebde/appointmentData ")
+  .get("https://crudcrud.com/api/5eb4c5dde7254fe0b74eae95a84ebfe0/appointmentData ")
   .then((response) => {
     console.log(response);
 
@@ -88,7 +88,7 @@ async function deleteUser(userId) {
   try{
     await axios
     .delete(
-      `https://crudcrud.com/api/7d89384a746441468ecb6f466f94ebde/appointmentData/${userId}`
+      `https://crudcrud.com/api/5eb4c5dde7254fe0b74eae95a84ebfe0/appointmentData/${userId}`
     )
     .then((response) => {
       removeUserFromScreen(userId);
